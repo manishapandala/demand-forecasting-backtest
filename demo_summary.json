@@ -1,0 +1,60 @@
+{
+  "scope": "deterministic generated-demand one-day-ahead forecasting",
+  "raw_rows": 3600,
+  "series": 4,
+  "date_range": {
+    "start": "2023-01-01",
+    "end": "2025-06-18"
+  },
+  "split_rows": {
+    "train": 2816,
+    "validation": 336,
+    "test": 336
+  },
+  "holdout": {
+    "model": {
+      "mae": 5.008,
+      "rmse": 6.321,
+      "wape": 0.0425,
+      "bias": -1.574
+    },
+    "seasonal_naive": {
+      "mae": 10.169,
+      "rmse": 14.832,
+      "wape": 0.0862,
+      "bias": -0.018
+    },
+    "wape_improvement": 0.507,
+    "interval_radius": 8.673,
+    "interval_coverage": 0.8274
+  },
+  "backtest_folds": [
+    {
+      "fold": 1,
+      "train_end": "2024-12-04",
+      "test_start": "2025-01-02",
+      "test_end": "2025-01-29",
+      "model_wape": 0.0319,
+      "baseline_wape": 0.0866
+    },
+    {
+      "fold": 2,
+      "train_end": "2025-01-01",
+      "test_start": "2025-01-30",
+      "test_end": "2025-02-26",
+      "model_wape": 0.0393,
+      "baseline_wape": 0.081
+    },
+    {
+      "fold": 3,
+      "train_end": "2025-01-29",
+      "test_start": "2025-02-27",
+      "test_end": "2025-03-26",
+      "model_wape": 0.0374,
+      "baseline_wape": 0.0771
+    }
+  ],
+  "mean_backtest_model_wape": 0.0362,
+  "mean_backtest_baseline_wape": 0.0816,
+  "runtime_seconds": 3.162
+}
